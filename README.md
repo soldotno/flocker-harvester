@@ -1,12 +1,17 @@
 # Flocker setup for MongoDB, Elasticsearch, Kibana, Logstash
 
+## Objectives
+
+Getting up and running with MongoDB and Elasticsearch with minimal fuzz.
+
+
 ### Requirements
 
-Vagrant (1.6.2 or newer)
-VirtualBox
+- Vagrant (1.6.2 or newer)
+- VirtualBox
 
 
-### Getting up and running
+### Get going
 
 
 ```bash 

@@ -13,6 +13,9 @@ Getting up and running with MongoDB and Elasticsearch with minimal fuzz.
 
 ### Get going
 
+"nodes":
+  "172.16.255.250": ["elasticsearch", "logstash", "kibana"]
+  "172.16.255.251": ["mongodb"]
 
 ```bash 
 git clone git@github.com:soldotno/flocker-harvester.git
@@ -43,7 +46,7 @@ Logstash: http://172.16.255.250/
 Notify ES about the mongodb river
 
 ```bash 
-$ curl -XPUT 'http://127.0.0.1:9200/_river/mongodb/_meta' -d @init.json
+$ curl -XPUT 'http://172.16.255.250:9200/_river/mongodb/_meta' -d @init.json
 ```
 
 **init.json**
@@ -65,7 +68,7 @@ $ curl -XPUT 'http://127.0.0.1:9200/_river/mongodb/_meta' -d @init.json
 Do a wildcard search:
 
 ```bash
-curl -XGET 'http://127.0.0.1:9200/harvester/_search?pretty=true&q=*:*'
+curl -XGET 'http://172.16.255.250:9200/harvester/_search?pretty=true&q=*:*'
 {
   "took" : 1,
   "timed_out" : false,
@@ -83,7 +86,7 @@ curl -XGET 'http://127.0.0.1:9200/harvester/_search?pretty=true&q=*:*'
 ```
 
 **MongoDB River Administration** 
-http://127.0.0.1:9200/_plugin/river-mongodb/
+http://172.16.255.250:9200/_plugin/river-mongodb/
 
 
 

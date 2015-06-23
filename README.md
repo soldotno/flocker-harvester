@@ -16,7 +16,7 @@ vagrant up
 flocker-deploy 172.16.255.250 elk-deployment.yml elk-application.yml
 ```
 
-### Now you should be able to access MongoDB
+Now you should be able to access MongoDB
 
 ```bash
 mongo 172.16.255.251

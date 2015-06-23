@@ -35,7 +35,8 @@ Logstash: http://172.16.255.250/
 `brew list elasticsearch | ack plugin` --install elasticsearch/elasticsearch-mapper-attachments/2.5.0
 ```
 
-### Notify ES about the mongodb river
+Notify ES about the mongodb river
+
 ```bash 
 $ curl -XPUT 'http://127.0.0.1:9200/_river/mongodb/_meta' -d @init.json
 ```

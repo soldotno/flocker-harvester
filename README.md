@@ -8,7 +8,6 @@ VirtualBox
 
 ### Getting up and running
 
-Clone and cd into this repo. Enter the following commands.
 
 ```bash 
 git clone git@github.com:soldotno/flocker-harvester.git

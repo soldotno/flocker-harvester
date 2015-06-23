@@ -57,8 +57,25 @@ $ curl -XPUT 'http://127.0.0.1:9200/_river/mongodb/_meta' -d @init.json
 }
 ```
 
-Test that it works:
-```bash curl -XGET 'http://127.0.0.1:9200/harvester/_search?q=Poseforbruket&pretty' ```
+Do a wildcard search:
+
+```bash
+curl -XGET 'http://127.0.0.1:9200/harvester/_search?pretty=true&q=*:*'
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 0,
+    "max_score" : null,
+    "hits" : [ ]
+  }
+}
+```
 
 **MongoDB River Administration** 
 http://127.0.0.1:9200/_plugin/river-mongodb/

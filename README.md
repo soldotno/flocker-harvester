@@ -11,11 +11,8 @@ Getting up and running with MongoDB and Elasticsearch with minimal fuzz.
 - VirtualBox
 
 
-### Get going
+### Start it
 
-"nodes":
-  "172.16.255.250": ["elasticsearch", "logstash", "kibana"]
-  "172.16.255.251": ["mongodb"]
 
 ```bash 
 git clone git@github.com:soldotno/flocker-harvester.git

@@ -11,7 +11,7 @@ VirtualBox
 Clone and cd into this repo. Enter the following commands.
 
 ```bash 
-git clone 
+git clone git@github.com:soldotno/flocker-harvester.git
 cd !$
 vagrant up
 flocker-deploy 172.16.255.250 elk-deployment.yml elk-application.yml

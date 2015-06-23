@@ -6,7 +6,7 @@ Vagrant (1.6.2 or newer)
 VirtualBox
 
 
-## Getting up and running
+### Getting up and running
 
 Clone and cd into this repo. Enter the following commands.
 

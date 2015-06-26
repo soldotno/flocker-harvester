@@ -39,10 +39,10 @@
       # mounted:
       "mountpoint": "/data/db"
 
-  "configbox"
-    "image": "stabenfeldt/elasticsearch-configbox"
-     "environment":
-       "RIVER_MAPPING": "https://raw.githubusercontent.com/soldotno/harvester-webservice/feature/es-back/setup-harvester-index.json?token=AALEGGpgMJ9YjgBmtULOjOzYDwzXB7KXks5VllWqwA%3D%3D"
-       "RIVER_NAME": "harvester"
+  "elasticsearch-river-setup":
+    "image": "stabenfeldt/elasticsearch-river-setup"
+    "environment":
+      "RIVER_MAPPING": "https://raw.githubusercontent.com/soldotno/harvester-webservice/feature/es-back/setup-harvester-index.json?token=AALEGGpgMJ9YjgBmtULOjOzYDwzXB7KXks5VllWqwA%3D%3D"
+      "RIVER_NAME": "harvester"
 
 

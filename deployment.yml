@@ -1,4 +1,4 @@
 "version": 1
 "nodes":
   "172.16.255.250": ["elasticsearch", "logstash", "kibana"]
-  "172.16.255.251": ["mongodb"]
+  "172.16.255.251": ["mongodb", "elasticsearch-river-setup"]

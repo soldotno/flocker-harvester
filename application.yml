@@ -1,12 +1,14 @@
 "version": 1
 "applications":
+
   "elasticsearch":
-    "image": "clusterhq/elasticsearch"
+    "image": "stabenfeldt/elasticsearch-river-mongodb"
     "ports":
     - "internal": 9200
       "external": 9200
     "volume":
       "mountpoint": "/var/lib/elasticsearch/"
+
   "logstash":
     "image": "clusterhq/logstash"
     "ports":

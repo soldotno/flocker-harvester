@@ -1,0 +1,41 @@
+"version": 1
+"applications":
+  "elasticsearch":
+    "image": "clusterhq/elasticsearch"
+    "ports":
+    - "internal": 9200
+      "external": 9200
+    "volume":
+      "mountpoint": "/var/lib/elasticsearch/"
+  "mongodb":
+    "image": "clusterhq/mongodb"
+    "ports":
+    - "internal": 27017
+      "external": 27017
+    "volume":
+      # The location within the container where the data volume will be
+      # mounted:
+      "mountpoint": "/data/db"
+  "logstash":
+    "image": "clusterhq/logstash"
+    "ports":
+    - "internal": 5000
+      "external": 5000
+    "links":
+    - "local_port": 9200
+      "remote_port": 9200
+      "alias": "es"
+  "kibana":
+    "image": "clusterhq/kibana"
+    "ports":
+    - "internal": 8080
+      "external": 80
+   "manager-image":
+     "image": "busybox-ubuntu-14.04"i
+     "link": elasticsearch:es
+         #verify this name and find one with curl or wget
+       # Dockerfile will do the curl and plugin install setup
+
+       docker run --link elasticsearch:es imagename fetch http://es/url
+
+       # How are these images linked in Flocker

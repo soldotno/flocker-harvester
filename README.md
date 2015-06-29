@@ -14,11 +14,11 @@ Getting up and running with MongoDB and Elasticsearch with minimal fuzz.
 ### Start it
 
 
-```bash 
+```bash
 git clone git@github.com:soldotno/flocker-harvester.git
 cd !$
 vagrant up
-flocker-deploy 172.16.255.250 elk-deployment.yml elk-application.yml
+flocker-deploy 172.16.255.250 deployment.yml application.yml
 ```
 
 Now you should be able to access MongoDB
@@ -42,7 +42,7 @@ Logstash: http://172.16.255.250/
 
 Notify ES about the mongodb river
 
-```bash 
+```bash
 $ curl -XPUT 'http://172.16.255.250:9200/_river/mongodb/_meta' -d @init.json
 ```
 
@@ -82,7 +82,7 @@ curl -XGET 'http://172.16.255.250:9200/harvester/_search?pretty=true&q=*:*'
 }
 ```
 
-**MongoDB River Administration** 
+**MongoDB River Administration**
 http://172.16.255.250:9200/_plugin/river-mongodb/
 
 

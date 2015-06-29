@@ -30,10 +30,10 @@
     "ports":
     - "internal": 27017
       "external": 27017
-    "links":
-    - "local_port": 9200
-      "remote_port": 9200
-      "alias": "es"
+    #"links":
+    #- "local_port": 9200
+    #  "remote_port": 9200
+    #  "alias": "es"
     "volume":
       # The location within the container where the data volume will be
       # mounted:
